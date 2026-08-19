@@ -1,75 +1,79 @@
-# React + TypeScript + Vite
+# AXION — Engenharia & Soluções
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page comercial da **AXION — Engenharia & Soluções**, desenvolvida com foco em apresentação de serviços, geração de leads e conversão através do WhatsApp.
 
-Currently, two official plugins are available:
+## 🎯 Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A landing page foi projetada para transformar tráfego pago em oportunidades comerciais através do fluxo:
 
-## React Compiler
+**Anúncio → Landing Page → Serviço → WhatsApp → Orçamento**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O projeto possui uma interface moderna, responsiva e orientada à conversão.
 
-## Expanding the ESLint configuration
+## 🛠️ Serviços
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+A AXION apresenta os seguintes serviços:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- ⚡ Elétrica & Automação
+- ❄️ Ar-Condicionado
+- 💧 Hidráulica
+- 🔧 Pequenos Reparos
+- 🎨 Pintura
+- 🧱 Pedreiro & Pequenas Reformas
+- ▦ Drywall
+- ✦ Gesso & Acabamentos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Cada serviço possui um CTA próprio para solicitação de orçamento pelo WhatsApp.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Tecnologias
 
-```
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Lucide React
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ✨ Recursos
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Landing page responsiva
+- Design premium e industrial
+- Mosaico assimétrico de serviços
+- Animações com Framer Motion
+- Microinterações nos cards e botões
+- Hero com vídeo de obra em background
+- Vídeo em loop e sem áudio
+- WhatsApp flutuante
+- CTAs específicos por serviço
+- Mensagens personalizadas para WhatsApp
+- Estrutura preparada para tráfego pago
+- Estrutura preparada para integração futura com GA4 e Meta Pixel
+- Eventos de conversão preparados
+- SEO básico
+- Acessibilidade
+- Suporte a `prefers-reduced-motion`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📱 WhatsApp
 
-```
+Os CTAs direcionam o usuário para o WhatsApp da AXION:
+
+**+55 65 99284-2422**
+
+Cada serviço possui uma mensagem específica para facilitar a identificação da intenção do lead.
+
+## 📊 Rastreamento
+
+A aplicação possui uma camada de analytics preparada para futura integração com:
+
+- Google Analytics 4
+- Google Ads
+- Meta Pixel
+
+Eventos preparados:
+
+```text
+page_view
+view_service
+click_whatsapp
+whatsapp_service
+click_cta
