@@ -1,13 +1,18 @@
 import { motion } from 'framer-motion'
 import { WhatsAppButton } from './WhatsAppButton'
 import { WHATSAPP_GENERIC_MESSAGE } from '../lib/whatsapp'
+import { attendants } from '../data/attendants'
+import { useAttendant } from '../context/attendant-context'
 
 export function MidCta() {
+  const { attendant } = useAttendant()
+  const phoneNumber = attendants[attendant].whatsappNumber
+
   return (
     <section className="relative overflow-hidden border-b border-line bg-surface px-6 py-16 text-center">
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[260px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-green/[0.05] blur-[100px]"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[200px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-green/[0.04] blur-[90px]"
       />
       <motion.div
         initial={{ opacity: 0, y: 12 }}
@@ -17,7 +22,13 @@ export function MidCta() {
         className="relative mx-auto flex max-w-xl flex-col items-center gap-5"
       >
         <p className="text-base text-fg sm:text-lg">Não encontrou o que precisa? Fale com a gente.</p>
-        <WhatsAppButton message={WHATSAPP_GENERIC_MESSAGE} location="mid-cta" variant="primary" />
+        <WhatsAppButton
+          phoneNumber={phoneNumber}
+          message={WHATSAPP_GENERIC_MESSAGE}
+          location="mid-cta"
+          attendant={attendant}
+          variant="primary"
+        />
       </motion.div>
     </section>
   )

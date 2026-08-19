@@ -1,4 +1,5 @@
 import { MotionConfig } from 'framer-motion'
+import { AttendantProvider } from './context/AttendantProvider'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { ServicesMosaic } from './components/ServicesMosaic'
@@ -8,21 +9,25 @@ import { HowItWorks } from './components/HowItWorks'
 import { FinalCta } from './components/FinalCta'
 import { Footer } from './components/Footer'
 import { WhatsAppFloat } from './components/WhatsAppFloat'
+import { AttendantSelector } from './components/AttendantSelector'
 
 function App() {
   return (
     <MotionConfig reducedMotion="user">
-      <Header />
-      <main>
-        <Hero />
-        <ServicesMosaic />
-        <MidCta />
-        <WhyChooseUs />
-        <HowItWorks />
-        <FinalCta />
-      </main>
-      <Footer />
-      <WhatsAppFloat />
+      <AttendantProvider>
+        <Header />
+        <main>
+          <Hero />
+          <ServicesMosaic />
+          <MidCta />
+          <WhyChooseUs />
+          <HowItWorks />
+          <FinalCta />
+        </main>
+        <Footer />
+        <WhatsAppFloat />
+        <AttendantSelector />
+      </AttendantProvider>
     </MotionConfig>
   )
 }

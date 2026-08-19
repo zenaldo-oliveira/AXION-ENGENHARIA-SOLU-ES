@@ -6,14 +6,17 @@ const steps = [
   { step: '03', title: 'Alinhamos os detalhes', description: 'Avaliamos a demanda e enviamos o orçamento.' },
   {
     step: '04',
-    title: 'Executamos com padrão AXION',
+    title: 'Executamos com padrão Ideal Técnica',
     description: 'Serviço entregue com precisão técnica e acabamento premium.',
   },
 ]
 
 export function HowItWorks() {
   return (
-    <section className="border-b border-line bg-surface px-6 py-24 sm:py-32">
+    <section
+      id="como-funciona"
+      className="scroll-mt-24 border-b border-line bg-surface px-6 py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <span className="font-display text-xs uppercase tracking-[0.3em] text-green">

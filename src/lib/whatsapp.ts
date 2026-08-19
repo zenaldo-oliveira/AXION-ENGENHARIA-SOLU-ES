@@ -1,8 +1,6 @@
-export const WHATSAPP_NUMBER = '5565992832422'
-
 export const WHATSAPP_GENERIC_MESSAGE =
-  'Olá! Vim pelo site da AXION e gostaria de solicitar um orçamento.'
+  'Olá! Tudo bem? Vi os serviços da Ideal Técnica pelo site e gostaria de solicitar um orçamento. Como podemos começar?'
 
-export function buildWhatsAppUrl(message: string): string {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+export function buildWhatsAppUrl(phoneNumber: string, message: string): string {
+  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 }
